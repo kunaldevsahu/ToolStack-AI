@@ -17,7 +17,7 @@ connectDB();
 
 const app = express();
 app.use(cors({
-  origin: "https://your-vercel-app.vercel.app",
+  origin: ["https://tool-stack-d4drfrcwg-kunals-projects-9cd1ad84.vercel.app","https://tool-stack-ai.vercel.app", "http://localhost:5173"],
   credentials: true
 }));
 app.use(express.json());
