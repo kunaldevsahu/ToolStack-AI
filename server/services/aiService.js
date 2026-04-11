@@ -1,19 +1,35 @@
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import OpenAI from "openai";
 
-const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
+let client;
 
 export const generateWithAI = async (prompt) => {
   try {
-    const model = genAI.getGenerativeModel({
-      model: "gemini-1.5-flash", // fast + cheap
+    if (!client) {
+      console.log("Initializing OpenAI client with GROQ KEY:", !!process.env.GROQ_API_KEY);
+      client = new OpenAI({
+        apiKey: process.env.GROQ_API_KEY,
+        baseURL: "https://api.groq.com/openai/v1", // ✅ Groq endpoint
+      });
+    }
+
+    const response = await client.chat.completions.create({
+      model: "llama-3.1-8b-instant", // ✅ fast + good
+      messages: [
+        {
+          role: "system",
+          content: "You are an expert AI writing assistant.",
+        },
+        {
+          role: "user",
+          content: prompt,
+        },
+      ],
+      temperature: 0.7,
     });
 
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-
-    return response.text();
+    return response.choices[0].message.content;
   } catch (error) {
-    console.error(error);
-    throw new Error("Gemini AI generation failed");
+    console.error("Groq Error:", error);
+    throw new Error("Groq AI generation failed");
   }
 };

@@ -1,15 +1,18 @@
 // Entry point
 // server.js
-import express from "express";
 import dotenv from "dotenv";
+dotenv.config({ path: "./.env" });
+import express from "express";
 import cors from "cors";
 import connectDB from "./config/db.js";
 import authRoutes from "./routes/authRoutes.js";
 import generateRoutes from "./routes/generateRoutes.js";
+import historyRoutes from "./routes/historyRoutes.js";
 
 
 
-dotenv.config();
+
+
 connectDB();
 
 const app = express();
@@ -19,6 +22,7 @@ app.use(express.json());
 
 app.use("/api/auth", authRoutes);
 app.use("/api/generate", generateRoutes);
+app.use("/api/history", historyRoutes);
 
 app.get("/", (req, res) => {
   res.send("API running...");
