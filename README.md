@@ -1,46 +1,37 @@
-# ToolStack AI 🚀
+# ToolStack AI
 
-ToolStack AI is a premium, AI-powered toolkit designed to supercharge productivity for developers, writers, and students. Built with the full MERN stack and fully integrated with the powerful Google Gemini AI model, this platform provides a unified suite of AI utilities wrapped in a stunning, highly-responsive glassmorphic interface.
+ToolStack AI is a full-stack web application that provides a unified interface for multiple AI-powered utilities. Built with the MERN stack and integrated with the Google Gemini API, it allows users to generate, transform, and analyze text and data through a single dashboard.
 
-## 🌟 Key Features
+## Features
 
-### 🛠️ Comprehensive AI Tool Suite
-- **✨ Humanizer**: Transforms robotic-sounding AI generated text into natural, conversational, human-like language that bypasses AI detectors.
-- **📖 Summarizer**: Quickly extracts the most important points and core message from lengthy articles, documents, or reports.
-- **✒️ Rewriter**: Paraphrases your existing text to improve clarity, fix grammar, and adjust the tone without changing the original meaning.
-- **📧 Email Generator**: Instantly drafts complete, articulate professional emails based on a short description.
-- **🧠 Explain Simple**: Breaks down highly technical, academic, or complex jargon into simple terms that a 5th grader could understand.
-- **🔑 Keyword Extractor**: Scans your content and identifies the most important SEO keywords, primary topics, and underlying themes.
-- **💻 Code Converter**: Translates functional code snippets from one programming language to another while preserving core logic.
-- **📊 JSON to CSV Converter**: Transforms structural JSON objects or arrays of objects into properly formatted and downloadable CSV data.
+### AI Tools
+- **Humanizer**: Rewrites AI-generated text to sound more natural and conversational.
+- **Summarizer**: Extracts key points and core messages from long-form text or documents.
+- **Rewriter**: Paraphrases text to improve clarity, grammar, or adjust the tone.
+- **Email Generator**: Drafts professional emails based on short prompts.
+- **Explain Simple**: Breaks down complex technical concepts into easily understandable terms.
+- **Keyword Extractor**: Identifies SEO keywords and primary topics from content.
+- **Code Converter**: Translates functional code snippets between different programming languages.
+- **JSON to CSV Converter**: Transforms JSON objects or arrays into formatted CSV data.
 
-### 🔐 Secure & Personalized Experience
-- **Authentication**: Fully secure JWT-based stateless authentication system.
-- **Generation History**: A dedicated history feed where all of your past outputs, inputs, and selected tools are securely saved. Easily expand, view, or copy past generations.
-- **User Profile & Stats**: Visually engaging usage dashboards showing how many words you've generated, total prompt runs, and usage charts highlighting your favorite tools.
-- **Smart Navigation**: A predictive, dynamic top search bar that allows users to instantly filter and jump to any specific tool or page.
+### Platform Functionality
+- **Authentication**: JWT-based stateless authentication system.
+- **History Tracking**: Saves inputs, outputs, and selected tools for past generations.
+- **User Dashboard**: Provides statistics on tool usage and total prompt execution.
+- **Global Search**: Quick navigation to tools and pages from the navigation bar.
 
-## 🏗️ Technology Stack
+## Technology Stack
 
-**Frontend:**
-- **React (Vite)** for lightning-fast client-side rendering.
-- **Tailwind CSS** for the custom responsive dark mode design.
-- **Framer Motion** for elegant layouts and fluid micro-animations.
-- **Lucide React** for premium iconography.
-- **Axios** for API integrations.
+- **Frontend**: React (Vite), Tailwind CSS (v4), Framer Motion, Lucide React, Axios.
+- **Backend**: Node.js, Express.js, MongoDB, Mongoose, JSON Web Tokens.
+- **AI Integration**: `@google/generative-ai` (Gemini API).
 
-**Backend:**
-- **Node.js & Express.js** providing a robust custom REST API.
-- **MongoDB & Mongoose** for securely storing user accounts and historical AI interactions.
-- **JSON Web Token (JWT)** for route protection middleware.
-
-**AI Integration:**
-- **Google Generative AI (Gemini)** dynamically processing custom curated prompt engineering to act as multiple specialized tools.
-
-## 🚀 Getting Started
+## Getting Started
 
 ### Prerequisites
-Make sure you have Node.js and npm installed on your machine. You will also need a MongoDB instance (local or MongoDB Atlas) and an API key from Google Gemini Studio.
+- Node.js and npm
+- MongoDB database (local or Atlas cluster)
+- Google Gemini API key
 
 ### 1. Clone the Repository
 ```bash
@@ -49,38 +40,39 @@ cd ToolStack
 ```
 
 ### 2. Backend Setup
+Navigate to the server directory and install dependencies:
 ```bash
 cd server
 npm install
 ```
-Create a `.env` file in the `/server` directory containing the following:
+
+Create a `.env` file in the `server` directory with the following variables:
 ```env
 PORT=5000
 MONGODB_URI=your_mongodb_connection_string
 JWT_SECRET=your_jwt_secret_key
 GEMINI_API_KEY=your_google_gemini_api_key
 ```
-Start the backend development server:
+
+Start the backend server:
 ```bash
 npm run dev
 ```
 
 ### 3. Frontend Setup
-Open a new terminal tab and navigate to the client folder.
+Open a new terminal, navigate to the client folder, and install dependencies:
 ```bash
 cd client
 npm install
 ```
+
 Start the Vite development server:
 ```bash
 npm run dev
 ```
 
-### 4. Open the App
-Navigate to `http://localhost:5173` in your browser. Create an account, log in, and start generating!
+### 4. Usage
+Open `http://localhost:5173` in your browser. Create an account to log in and access the dashboard.
 
-## 🎨 UI / UX Design Note
-ToolStack AI strictly adheres to modern luxury web design aesthetics. The interface utilizes dark modes, multi-faceted glassmorphism (translucent panels over blurred backgrounds), and rich, vibrant gradients to provide an extremely premium interaction feel beyond a simple utility.
-
----
-*Built with ❤️ and AI.*
+## Architecture Notes
+The application features a component-based frontend architecture using React context for authentication state management. The UI is custom-styled with Tailwind CSS. The backend utilizes Express routers and controllers to separate concerns, isolating authentication, user session logic, AI prompt generation, and history persistence.
