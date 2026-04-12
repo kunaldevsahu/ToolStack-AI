@@ -2,6 +2,10 @@
 
 ToolStack AI is a full-stack web application that provides a unified interface for multiple AI-powered utilities. Built with the MERN stack and integrated with the Google Gemini API, it allows users to generate, transform, and analyze text and data through a single dashboard.
 
+## Live Demo
+**[Launch ToolStack AI](https://tool-stack-ai.vercel.app)**  
+*(Backend deployed on Render, Frontend deployed on Vercel)*
+
 ## Features
 
 ### AI Tools
@@ -64,6 +68,11 @@ Open a new terminal, navigate to the client folder, and install dependencies:
 ```bash
 cd client
 npm install
+```
+
+Create a strictly local `.env` file in the `client` directory to point to your local backend API:
+```env
+VITE_API_URL=http://localhost:5001/api
 ```
 
 Start the Vite development server:
