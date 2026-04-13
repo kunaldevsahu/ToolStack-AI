@@ -33,7 +33,7 @@ export default function Sidebar() {
           <Sparkles className="w-5 h-5 text-white" />
         </div>
         <span className="text-lg font-semibold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-          ToolCraft AI
+          ToolStack AI
         </span>
       </div>
 
@@ -44,10 +44,9 @@ export default function Sidebar() {
             key={to}
             to={to}
             className={({ isActive }) =>
-              `flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 group ${
-                isActive
-                  ? 'bg-indigo-500/15 text-indigo-400 shadow-sm shadow-indigo-500/10'
-                  : 'text-gray-400 hover:text-gray-200 hover:bg-white/5'
+              `flex items-center gap-3 px-4 py-3 rounded-xl text-sm font-medium transition-all duration-200 group ${isActive
+                ? 'bg-indigo-500/15 text-indigo-400 shadow-sm shadow-indigo-500/10'
+                : 'text-gray-400 hover:text-gray-200 hover:bg-white/5'
               }`
             }
           >

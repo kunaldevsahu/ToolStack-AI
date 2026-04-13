@@ -49,7 +49,7 @@ export default function Login() {
             <Sparkles className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-4xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-            ToolCraft AI
+            ToolStack AI
           </h1>
           <p className="text-gray-500 text-lg leading-relaxed">
             Your AI-powered writing toolkit for crafting flawless content — summaries, emails, rewrites, and more.
@@ -75,7 +75,7 @@ export default function Login() {
           <div className="glass-panel rounded-2xl p-8 space-y-6">
             <div className="space-y-2">
               <h2 className="text-2xl font-semibold text-white">Welcome back</h2>
-              <p className="text-gray-500 text-sm">Sign in to continue to ToolCraft AI</p>
+              <p className="text-gray-500 text-sm">Sign in to continue to ToolStack AI</p>
             </div>
 
             {error && (

@@ -48,7 +48,7 @@ export default function Signup() {
             <Sparkles className="w-10 h-10 text-white" />
           </div>
           <h1 className="text-4xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent">
-            Join ToolCraft AI
+            Join ToolStack AI
           </h1>
           <p className="text-gray-500 text-lg leading-relaxed">
             Unlock the power of AI writing tools. Create, refine, and perfect your content effortlessly.
@@ -67,7 +67,7 @@ export default function Signup() {
           <div className="glass-panel rounded-2xl p-8 space-y-6">
             <div className="space-y-2">
               <h2 className="text-2xl font-semibold text-white">Create your account</h2>
-              <p className="text-gray-500 text-sm">Get started with ToolCraft AI for free</p>
+              <p className="text-gray-500 text-sm">Get started with ToolStack AI for free</p>
             </div>
 
             {error && (
